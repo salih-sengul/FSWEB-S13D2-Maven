@@ -7,6 +7,7 @@ public class Main {
         System.out.println("Hello world!");
         isPalindrome(-707);
         System.out.println(isPerfectNumber(-1));
+        System.out.println(numberToWords(505));
     }
     public static boolean isPalindrome(int a) {
         int sayi = a;
@@ -45,5 +46,34 @@ public class Main {
 
         }
         return bölenToplamı==a;
+    }
+
+    public static String numberToWords(int a) {
+
+        if(a<0) return "Invalid Value";
+
+        String[] rakamlar = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+
+        String sayılar = String.valueOf(a);
+        char[] sayıDizisi = sayılar.toCharArray();
+        int sayı1 = 0;
+
+        String sayıKelime = "";
+
+        for (int i = 0; i<sayıDizisi.length;i++){
+
+            sayı1 = sayıDizisi[i]-'0';
+
+            for(int j=0;j<rakamlar.length;j++){
+
+                if(j==sayı1) {
+                    sayıKelime += rakamlar[j]+" ";
+                }
+
+            }
+        }
+
+        return sayıKelime.trim();
+
     }
 }
