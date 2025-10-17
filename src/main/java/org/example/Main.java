@@ -38,6 +38,7 @@ public class Main {
         String stringSayi = Integer.toString(sayi);
         String geciciIfade = "";
         String sonIfade = "";
+        
 
         for(int i = 0; i<stringSayi.length();i++){
 
